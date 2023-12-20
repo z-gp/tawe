@@ -17,7 +17,7 @@ ds = structure(list(journal = c("guardian", "nytimes", "washingtonpost"), topic 
 
 
 #Step 2 ####
-#download and read the "enwiki_20180420_100d.txt" file into the object "wikipedia"
+#download (http://vectors.nlpl.eu/repository/) and read the "enwiki_20180420_100d.txt" file into the object "wikipedia"
 wikipedia = scan(file = "enwiki_20180420_100d.txt", what="", sep="\n")
 
 #source: https://gist.github.com/tjvananne/8b0e7df7dcad414e8e6d5bf3947439a9
