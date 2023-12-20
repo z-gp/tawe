@@ -1,5 +1,8 @@
+#The following code refers to the paper "Automatic topic title assignment with word embedding". The reference section is indicated below each step.
+
 #Step 1 ####
-#load output from LDA (or other topic modelling technique) and word embedding. 
+#(Sections 3.1 and 4.2)
+#load output from LDA (or other topic modelling technique) and word embedding 
 #Create a ds object with all the topics, similar to the example given below.
 
 ds = structure(list(journal = c("guardian", "nytimes", "washingtonpost"), topic = c("Topic 1", "Topic 1", "Topic 1"), 
@@ -17,6 +20,7 @@ ds = structure(list(journal = c("guardian", "nytimes", "washingtonpost"), topic 
 
 
 #Step 2 ####
+#(Sections 3.1 and 4.2)
 #download (http://vectors.nlpl.eu/repository/) and read the "enwiki_20180420_100d.txt" file into the object "wikipedia"
 wikipedia = scan(file = "enwiki_20180420_100d.txt", what="", sep="\n")
 
@@ -53,7 +57,8 @@ enwiki.100_transposed = enwiki.100_transposed[-1,]
 
 
 #Step 3 ####
-#converting words into vectors
+#(Sections 3.2 and 4.3)
+#converting words into vectors 
 
 library(lsa)
 #set the following parameters based on the number of topics and words
@@ -83,7 +88,8 @@ topic_title
 
 
 #Step 4 ####
-#computing similarities
+#(Section 4.4)
+#computing similarities 
 
 #library(lsa)
 titles_GPT = c("coverage", "catastrophic", "analysis")
