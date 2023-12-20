@@ -74,10 +74,9 @@ for (i in 1:n) {
     }
   }
   
-  medoid = apply(enwiki.100_bow, 2, median)
+  centroid = apply(enwiki.100_bow, 2, median)
   
-  similarity = cosine(medoid, t(enwiki.100_bow)) 
-  names(sort(similarity, decreasing=T)[1]) 
+  similarity = cosine(centroid, t(enwiki.100_bow)) 
   topic_title[i] = names(sort(similarity, decreasing=T)[1]) 
 }
 topic_title
